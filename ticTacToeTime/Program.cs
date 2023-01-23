@@ -7,11 +7,12 @@ namespace ticTacToeTime
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the game");
+
             Supporting sup = new Supporting();
 
             char[,] gameBoard = { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
 
-         
+            sup.PrintBoard(gameBoard);
 
             int turns = 0;
             while (turns < 9)
@@ -20,14 +21,16 @@ namespace ticTacToeTime
                 string input;
                 if (turns % 2 == 0 )
                 {
-                    Console.WriteLine("Go player 1!");
+                    Console.WriteLine("\nGo player 1!");
                     marker = 'X';
                 }
                 else
                 {
-                    Console.WriteLine("Go player 2!");
+                    Console.WriteLine("\nGo player 2!");
                     marker = 'O';
                 }
+
+                
 
                 Console.WriteLine("Where do you want to go? ex-1,1 ");
                 input = Console.ReadLine();
@@ -54,6 +57,22 @@ namespace ticTacToeTime
                 }
 
                 gameBoard[rowNumber, colNumber] = marker;
+
+               
+                
+
+                char Winner = sup.Winner(gameBoard);
+
+                if (Winner == 'X')
+                {
+                    Console.WriteLine("Player 1 wins");
+                    break;
+                }
+                if (Winner == 'O')
+                {
+                    Console.WriteLine("Player 2 wins");
+                    break;
+                }
 
                 sup.PrintBoard(gameBoard);
 
