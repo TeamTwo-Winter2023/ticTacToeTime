@@ -9,14 +9,14 @@ namespace ticTacToeTime
         // method to print board
         public void PrintBoard(char[,] boardArray)
         {
-            Console.WriteLine("\t1   2   3");
+            Console.WriteLine("\t0   1   2");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("1\t" + boardArray[0,0] + " | " + boardArray[0,1] + " | " + boardArray[0,2]);
+            Console.WriteLine("0\t" + boardArray[0,0] + " | " + boardArray[0,1] + " | " + boardArray[0,2]);
             Console.WriteLine("\t---------");
-            Console.WriteLine("2\t" + boardArray[1,0] + " | " + boardArray[1,1] + " | " + boardArray[1,2]);
+            Console.WriteLine("1\t" + boardArray[1,0] + " | " + boardArray[1,1] + " | " + boardArray[1,2]);
             Console.WriteLine("\t---------");
-            Console.WriteLine("3\t" + boardArray[2,0] + " | " + boardArray[2,1] + " | " + boardArray[2,2]);
+            Console.WriteLine("2\t" + boardArray[2,0] + " | " + boardArray[2,1] + " | " + boardArray[2,2]);
         }
 
         // method to return winner
